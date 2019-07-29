@@ -1,0 +1,320 @@
+/*                     ABOUT US PAGE                        */
+.banner.faq {
+  background: url("../img/faq-banner-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 4.85rem 0 1.5rem;
+
+  img {
+    display: block;
+    text-align: center;
+    margin: 1rem auto;
+
+    @include mq(s) {
+      max-width: 5rem;
+    }
+
+    @include mq(xs) {
+      max-width: 3rem;
+    }
+  }
+
+  h2 {
+    font-family: $abl, sans-serif;
+    font-size: 1.8rem;
+    color: $white;
+    margin: 0 auto;
+    text-align: center;
+
+    @include mq(s) {
+      max-width: 27.5rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  .line {
+    width: 100%;
+    max-width: 27.5rem;
+    height: 0.25rem;
+    background: $white;
+    margin: 0.5rem auto;
+
+    @include mq(s) {
+      max-width: 16.5rem;
+    }
+
+    @include mq(xs) {
+      max-width: 11.5rem;
+    }
+  }
+
+  p {
+    font-family: $ab, sans-serif;
+    font-size: 0.8rem;
+    color: $white;
+    margin: 1rem auto;
+    max-width: 25.6rem;
+    text-align: center;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  img.down {
+    margin: 0 auto;
+    padding-top: 3.5rem;
+    cursor: pointer;
+  }
+}
+
+.all-questions {
+  padding: 4rem 0 4.5rem;
+
+  .container {
+    @include flex;
+    @include justify-content(space-between);
+  }
+
+  &__categories {
+    width: 22%;
+    max-width: 13.9rem;
+    height: 22.25rem;
+    border: 1px solid $sign;
+    background: #fcfcfc;
+    padding: 1.75rem 0.75rem 0.5rem;
+
+    @include mq(md) {
+      height: 24rem;
+    }
+
+    @include mq(s) {
+      display: none;
+    }
+
+    h5.title {
+      color: $link;
+      margin: 0 auto 1rem;
+    }
+
+    .categor {
+      padding: 0.3rem;
+      margin: 0.1rem auto;
+      //min-width: 11.4rem;
+      border: 1px solid transparent;
+      @include flex;
+      @include justify-content(space-between);
+      @include align-item(center);
+      cursor: pointer;
+
+      p {
+        font-family: $a, sans-serif;
+        font-size: 0.7rem;
+        color: #808080;
+        margin: 0;
+      }
+
+      span {
+        width: 0.4rem;
+        height: 1px;
+        background: $link;
+        display: none;
+      }
+    }
+  }
+
+  &__block {
+    max-width: 41.6rem;
+    width: 77%;
+
+    @include mq(lg) {
+      width: 70%;
+    }
+
+    @include mq(s) {
+      width: 100%;
+      max-width: 27.5rem;
+      margin: 0 auto;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    &-search {
+      position: relative;
+
+      input {
+        width: 100%;
+        line-height: 1.5;
+        border: 1px solid $sign;
+        background: #fdfdfd;
+        padding: 0.65rem 0 0.65rem 3rem;
+        font-family: $a, sans-serif;
+        font-size: 0.8rem;
+        color: #343737;
+        margin: 0 auto;
+      }
+
+      @include placeholder {
+        font-family: $a, sans-serif;
+        font-size: 0.8rem;
+        color: $sign;
+      }
+
+      input:focus {
+        border: 1px solid #039cff;
+      }
+
+      button {
+        border: none;
+        background: none;
+        color: #dbdbdb;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        left: 1rem;
+        height: 1rem;
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &-qeustion {
+      padding-top: 1.75rem;
+
+      .web-hosting, .site-protection, .domain-registration {
+        display: none;
+
+        @include mq(s) {
+          display: block;
+        }
+      }
+
+      figure {
+        width: 100%;
+        margin: 0rem auto 1rem;
+        padding: 0.67rem 0;
+        background: $link;
+        cursor: pointer;
+
+        @include mq(xs) {
+          @include flex;
+          @include justify-content(flex-start);
+          @include align-item(center);
+        }
+
+        .pluss {
+          background: url("../img/plus.png") no-repeat center;
+          background-size: contain;
+          width: 0.65rem;
+          height: 0.65rem;
+          display: inline-block;
+          margin-left: 4.25rem;
+
+          @include mq(xs) {
+            margin-left: 1rem;
+          }
+        }
+
+        .minuss {
+          background: url("../img/minus.png") no-repeat center;
+          background-size: contain;
+          width: 0.65rem;
+          height: 0.65rem;
+          display: inline-block;
+          margin-left: 4.25rem;
+
+          @include mq(xs) {
+            margin-left: 1rem;
+          }
+        }
+
+        p {
+          font-family: $ab, sans-serif;
+          font-size: 0.8rem;
+          color: $white;
+          margin: 0 0 0 1.5rem;
+          display: inline-block;
+
+          @include mq(xs) {
+            margin: 0 0 0 0.5rem;
+            font-size: 0.65rem;
+          }
+        }
+      }
+
+      .big__block-block {
+        display: none;
+
+        .visible__block {
+          border: 1px solid $sign;
+          background: #fcfcfc;
+          max-width: 38rem;
+          margin: 1rem 0 1rem 2.6rem;
+
+          @include mq(xs) {
+            margin: 1rem 0 1rem 0.75rem;
+          }
+
+          &-open {
+            @include flex;
+            @include align-item(center);
+            padding: 1.245rem 1.5rem;
+            cursor: pointer;
+
+            .image {
+              img {
+                display: block;
+                margin: 0 auto;
+              }
+            }
+
+            p {
+              font-family: $ab, sans-serif;
+              font-size: 0.8rem;
+              color: $title;
+              margin: 0 0 0 1rem;
+            }
+          }
+
+          &-close {
+            display: none;
+
+            hr {
+              width: 85%;
+              margin: 0 auto;
+              background: $sign;
+              border: none;
+              height: 1px;
+            }
+
+            p {
+              font-family: $a, sans-serif;
+              font-size: 0.8rem;
+              color: $link;
+              margin: 0 auto;
+              padding: 1rem 3.5rem;
+
+              @include mq(xs) {
+                padding: 1rem;
+              }
+
+              span {
+                font-family: $ab, sans-serif;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

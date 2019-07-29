@@ -1,0 +1,447 @@
+/*                             PBX PAGE                      */
+.banner.pbx {
+  background: url("../img/pbx-banner-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 8rem 0;
+
+  @include mq(xs) {
+    padding: 4rem 0;
+  }
+
+  p.title {
+    font-family: $ab, sans-serif;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+
+    @include mq(xs) {
+      max-width: 14rem;
+      margin: 1rem auto;
+    }
+
+    span {
+      color: $policy;
+    }
+  }
+}
+
+.virtual {
+  padding: 4rem 0;
+
+  @include mq(s) {
+    padding: 2rem 0 0;
+  }
+
+  h3.title {
+    text-align: center;
+  }
+
+  p.title {
+    color: $title;
+    margin: 1rem auto;
+    text-align: center;
+    max-width: 33.5rem;
+
+    @include mq(s) {
+      max-width: 25rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  &__block {
+    @include flex;
+    @include flex-wrap;
+    @include justify-content(space-around);
+    padding-top: 2rem;
+
+    @include mq(md) {
+      max-width: 30rem;
+      margin: 0 auto;
+      @include justify-content(flex-start);
+    }
+
+    @include mq(s) {
+      max-width: 27.5rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    .flex {
+      @include flex;
+      @include align-item(center);
+      width: 30%;
+      margin: 1rem 0;
+
+      @include mq(md) {
+        width: 50%;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      div {
+
+        img {
+          display: block;
+          margin: 0 auto;
+
+          @include mq(s) {
+            width: 4rem;
+          }
+        }
+      }
+
+      p {
+        font-family: $ab, sans-serif;
+        font-size: 0.9rem;
+        color: $title;
+        margin: 0 0 0 2rem;
+
+        @include mq(lg) {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+.using {
+  background: url("../img/using-bg.png") no-repeat center;
+  background-size: cover;
+
+  @include mq(xs) {
+    padding: 2rem 0 0;
+  }
+
+  .container {
+    @include flex;
+    @include align-item(center);
+    @include justify-content(space-around);
+  }
+
+  &__block {
+
+    @include mq(s) {
+      max-width: 25rem;
+      margin: 0 auto;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    h3.title {
+      color: $white;
+      padding-top: 4rem;
+    }
+
+    p.title {
+      margin: 1rem 0;
+      max-width: 29rem;
+
+      span {
+        display: block;
+        margin: 1rem 0;
+        color: $policy;
+      }
+    }
+  }
+
+  &__block:nth-child(2) {
+
+    @include mq(s) {
+      display: none;
+    }
+  }
+}
+
+.plans {
+  background: #fafafa;
+  padding: 4rem 0;
+
+  @include mq(s) {
+    padding: 2rem 0;
+  }
+
+  img {
+    display: block;
+    margin: 1rem auto;
+
+    @include mq(s) {
+      width: 20%;
+      max-width: 5.5rem;
+
+      @include mq(xs) {
+        max-width: 4rem;
+      }
+    }
+  }
+
+  h3.title {
+    text-align: center;
+    margin: 0 auto;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  p.title {
+    color: $title;
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 1rem auto;
+    max-width: 28rem;
+
+    @include mq(s) {
+      max-width: 25rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  &__block {
+    padding-top: 2rem;
+
+    @include mq(s) {
+      width: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 47.3rem;
+      margin: 0 auto;
+
+      tr {
+        height: 3.5rem;
+
+        th {
+          font-family: $abl, sans-serif;
+          font-size: 0.8rem;
+          color: $black;
+          margin: 0 auto;
+          text-align: center;
+          border: 1px solid $link-hover;
+          width: 7.7rem;
+
+          @include mq(md) {
+            font-size: 0.7rem;
+          }
+
+          @include mq(s) {
+            font-size: 0.8rem;
+            min-width: 7.51rem;
+          }
+        }
+
+        th:first-child {
+          border: none;
+
+          @include mq(s) {
+            min-width: 9.15rem;
+          }
+        }
+
+        th:nth-child(3) {
+          border-right: none;
+          border-left: none;
+          position: relative;
+        }
+
+        th:nth-child(3):before {
+          content: url("../img/table-line.png");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          left: 0;
+        }
+
+        th:nth-child(3):after {
+          content: url("../img/table-line.png");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          right: 0;
+        }
+
+        th:nth-child(4) {
+          border-right: none;
+          border-left: none;
+        }
+
+        th:nth-child(5) {
+          border-right: none;
+          border-left: none;
+          position: relative;
+        }
+
+        th:nth-child(5):before {
+          content: url("../img/table-line.png");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          left: 0;
+        }
+
+        th:nth-child(5):after {
+          content: url("../img/table-line.png");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          right: 0;
+        }
+
+        th:nth-child(2) {
+          border-right: none;
+        }
+
+        th:last-child {
+          border-left: none;
+        }
+
+        td {
+          text-align: center;
+          font-family: $abl, sans-serif;
+          font-size: 0.8rem;
+          color: $black;
+          margin: 0 auto;
+          width: 7.7rem;
+          border: 1px solid $link-hover;
+
+          @include mq(md) {
+            font-size: 0.7rem;
+          }
+
+          @include mq(s) {
+            font-size: 0.8rem;
+          }
+
+          h6 {
+            font-family: $abl, sans-serif;
+            font-size: 0.8rem;
+            color: $link;
+            margin: 1rem auto;
+            text-align: center;
+
+            @include mq(md) {
+              font-size: 0.7rem;
+            }
+
+            @include mq(s) {
+              font-size: 0.8rem;
+            }
+          }
+
+          span {
+            font-family: $a, sans-serif;
+            font-size: 0.6rem;
+            color: #b2b2b2;
+            margin: 1rem auto;
+            display: block;
+            min-height: 0.75rem;
+          }
+
+          p {
+            font-family: $a, sans-serif;
+            font-size: 0.6rem;
+
+            span {
+              font-family: $abl, sans-serif;
+              color: $black;
+              display: inline-block;
+            }
+          }
+        }
+
+        td.all {
+          border: 1px solid $link-hover !important;
+        }
+
+        td:first-child {
+          font-family: $a, sans-serif;
+          font-size: 0.7rem;
+          color: $black;
+          margin: 0 auto;
+          width: 8.5rem;
+          text-align: left;
+          padding-left: 1rem;
+        }
+
+        td:nth-child(2) {
+          border-right: none;
+        }
+
+        td:last-child {
+          border-left: none;
+        }
+
+        td:nth-child(3) {
+          border-right: none;
+          border-left: none;
+          position: relative;
+        }
+
+        td:nth-child(3):before {
+          content: url("../img/table-line.png");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          left: 0;
+        }
+
+        td:nth-child(3):after {
+          content: url("../img/table-line.png");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          right: 0;
+        }
+
+        td:nth-child(4) {
+          border-right: none;
+          border-left: none;
+        }
+
+        td:nth-child(5) {
+          border-right: none;
+          border-left: none;
+          position: relative;
+        }
+
+        td:nth-child(5):before {
+          content: url("../img/table-line.png");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          left: 0;
+        }
+
+        td:nth-child(5):after {
+          content: url("../img/table-line.png");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          right: 0;
+        }
+      }
+    }
+  }
+}
+/*                                                           */

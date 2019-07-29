@@ -1,0 +1,59 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin input-placeholder($placeholder) {
+  -moz-placeholder:  $placeholder;
+  -moz-placeholder:  $placeholder;
+  -ms-input-placeholder:  $placeholder;
+  -webkit-input-placeholder: $placeholder;
+}
+
+@mixin placeholder {
+  input::-webkit-input-placeholder {
+    @content
+  }
+  input:-moz-placeholder {
+    @content
+  }
+  input::-moz-placeholder {
+    @content
+  }
+  input:-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin order($order) {
+  order: $order;
+  -webkit-order: $order;
+}
+
+
+@mixin flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+@mixin justify-content($justify-content) {
+  justify-content: $justify-content;
+  -webkit-justify-content: $justify-content;
+}
+
+@mixin align-item($align-item) {
+  align-items: $align-item;
+  -webkit-align-items: $align-item;
+}
+
+@mixin flex-direction($flex-direction) {
+  flex-direction: $flex-direction;
+  -webkit-flex-direction: $flex-direction;
+}

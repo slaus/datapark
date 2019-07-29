@@ -1,0 +1,548 @@
+/*                         DOMAIN PAGE                        */
+.banner.domain {
+  background: url("../img/domain-banner-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 11rem 0;
+
+  @include mq(xs) {
+    padding: 5rem 0;
+  }
+
+  h3.title {
+    max-width: 100%;
+    text-align: center;
+    padding-left: 0;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  p.title {
+    max-width: 100%;
+    text-align: center;
+    color: $white;
+    margin: 0 auto;
+    padding-left: 0;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  .banner__block {
+    max-width: 40.5rem;
+    margin: 0 auto;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    &-search {
+      position: relative;
+      max-width: 40.5rem;
+      margin: 1.5rem auto 0;
+
+      input {
+        border: 1px solid $sign;
+        @include border-radius(1rem);
+        background: $white;
+        width: 100%;
+        max-width: 33.7rem;
+        padding: 0.5rem 0 0.5rem 1rem;
+        font-family: $a, sans-serif;
+        font-size: 0.8rem;
+        color: $black;
+        line-height: 1.5;
+
+        @include mq(xs) {
+          padding: 0.25rem 0 0.25rem 1rem;
+        }
+      }
+
+      @include placeholder {
+        font-family: $a, sans-serif;
+        font-size: 0.8rem;
+        color: $sign;
+
+        @include mq(xs) {
+          font-size: 0.6rem;
+        }
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      button {
+        min-width: 10.5rem;
+        border: 1px solid $button;
+        @include border-radius(1rem);
+        background: $button;
+        font-family: $abl, sans-serif;
+        font-size: 0.8rem;
+        color: #fff;
+        text-align: center;
+        padding: 0.52rem 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include mq(s) {
+          min-width: 3rem;
+          background: transparent;
+          border: transparent;
+          padding: 0.5rem 0;
+        }
+
+        span {
+          @include mq(xs) {
+            display: none;
+          }
+        }
+
+        i {
+          display: none;
+
+          @include mq(xs) {
+            display: block;
+            color: $button;
+          }
+        }
+      }
+
+      button:hover {
+        border: 1px solid $link;
+        background: $link;
+
+        @include mq(xs) {
+          border: transparent;
+          background: transparent;
+        }
+      }
+    }
+
+    &-domain {
+      @include flex;
+      margin: 0.5rem 0 0.5rem 2rem;
+
+      @include mq(xs) {
+        @include flex-wrap;
+        margin: 0.5rem auto;
+      }
+
+      &-block {
+        @include flex;
+        @include align-item(center);
+        margin: 0 0.5rem;
+
+        div {
+
+          img {
+            display: block;
+          }
+        }
+
+        span {
+          display: block;
+          font-family: $a, sans-serif;
+          font-size: 0.6rem;
+          color: $white;
+          margin: 0 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+.domain {
+  padding: 5rem 0;
+
+  @include mq(xs) {
+    padding: 2rem 0;
+  }
+
+  h3.title {
+    text-align: center;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  p.title {
+    color: $title;
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 30rem;
+
+    @include mq(s) {
+      max-width: 25rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(space-between);
+    @include align-item(center);
+    padding-top: 2rem;
+
+    @include mq(xs) {
+      max-width: 14rem;
+      margin: 0 auto;
+    }
+
+    &-block {
+
+      @include mq(md) {
+        width: 50%;
+      }
+
+      .flex {
+        @include flex;
+        @include align-item(center);
+
+        div {
+          width: 3.2rem;
+          height: 2.8rem;
+
+          @include mq(md) {
+            height: auto;
+          }
+
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+
+        p {
+          font-family: $ab, sans-serif;
+          font-size: 0.8rem;
+          color: $title;
+          margin: 0 0 0 3rem;
+
+          @include mq(md) {
+            margin: 0 0 0 2rem;
+          }
+
+          span {
+            font-family: $a, sans-serif;
+            font-size: 0.6rem;
+            display: block;
+            max-width: 22.7rem;
+            margin: 0.5rem 0 0;
+          }
+        }
+      }
+
+      .flex:nth-child(2) {
+        margin: 4rem 0;
+
+        @include mq(md) {
+          margin: 2rem 0;
+        }
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    &-block:nth-child(1) {
+      width: 70%;
+
+      @include mq(md) {
+        width: 50%;
+      }
+
+      @include mq(s) {
+        width: 100%;
+        max-width: 27.5rem;
+        margin: 0 auto;
+      }
+    }
+
+    &-block:nth-child(2) {
+      @include mq(s) {
+        display: none;
+      }
+    }
+  }
+}
+
+.profitable {
+  background: url("../img/profitable-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 8.4rem 0 4.4rem;
+
+  @include mq(xs) {
+    padding: 8.4rem 0 1rem;
+  }
+
+  h3.title {
+    text-align: center;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  p.title {
+    color: $title;
+    margin: 1rem auto;
+    text-align: center;
+
+    @include mq(s) {
+      max-width: 23rem;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(space-around);
+    padding-top: 3rem;
+
+    @include mq(s) {
+      max-width: 27.5rem;
+      margin: 0 auto;
+      @include flex-wrap;
+      @include justify-content(center);
+      padding-top: 1rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    &-block {
+      width: 25%;
+      max-width: 7.6rem;
+
+      @include mq(s) {
+        width: 50%;
+        max-width: 10rem;
+        margin: 1rem auto;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      div {
+        width: 5rem;
+        height: 5rem;
+
+        @include mq(s) {
+          margin: 0 auto;
+        }
+
+        img {
+          display: block;
+          margin: 0;
+
+          @include mq(s) {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      p {
+        font-family: $a, sans-serif;
+        font-size: 0.6rem;
+        color: $title;
+
+        @include mq(s) {
+          text-align: center;
+          min-height: 5.7rem;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        font-family: $a, sans-serif;
+        font-size: 0.5rem;
+        color: $button;
+        margin: 1rem 0 0;
+
+        @include mq(s) {
+          margin: 1rem auto 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.capability {
+  padding: 5rem 0 2rem;
+
+  @include mq(s) {
+    padding: 1rem 0;
+  }
+
+  h3.title {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    @include mq(s) {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__img {
+    background: url("../img/capability-bg.png") no-repeat center;
+    background-size: cover;
+    height: 13.85rem;
+
+    @include mq(s) {
+      display: none;
+    }
+  }
+
+  &__block {
+    @include flex;
+    @include align-item(center);
+    max-width: 42.5rem;
+    margin: 3rem auto;
+
+    @include mq(s) {
+      max-width: 27.5rem;
+      margin: 1.5rem auto;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    div {
+      margin-right: 2rem;
+      width: 50px;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      font-family: $a, sans-serif;
+      font-size: 0.8rem;
+      color: $title;
+      margin: 0;
+
+      @include mq(md) {
+        font-size: 0.7rem;
+      }
+
+      @include mq(s) {
+        br {
+          display: none;
+        }
+      }
+
+      @include mq(xs) {
+        font-size: 0.6rem;
+      }
+
+      span {
+        font-family: $ab, sans-serif;
+      }
+    }
+  }
+}
+
+.privacy {
+  padding: 3rem 0 1rem;
+
+  h3.title {
+    text-align: center;
+  }
+
+  &__block {
+    background: url("../img/privacy-bg.png") no-repeat center;
+    background-size: cover;
+
+    @include mq(s) {
+      padding: 2.5rem 0;
+    }
+
+    .container{
+      @include flex;
+      @include align-item(center);
+    }
+
+    &-block {
+
+      @include mq(s) {
+        max-width: 27.5rem;
+        margin: 0 auto;
+      }
+
+      @include mq(xs) {
+        max-width: 14rem;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      p {
+        font-family: $a, sans-serif;
+        font-size: 0.8rem;
+        color: $white;
+        margin: 0 auto;
+
+        br {
+          @include mq(md) {
+            display: none;
+          }
+        }
+
+        span {
+          padding-left: 0.5rem;
+
+          @include mq(md) {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    &-block:nth-child(1) {
+      width: 14.05rem;
+      margin-right: 1rem;
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+  }
+}
+
+.question {
+  padding: 2rem 0;
+
+  h3.title.last {
+    padding-top: 3rem;
+  }
+}
+
+/*                                                           */

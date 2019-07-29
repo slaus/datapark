@@ -1,0 +1,457 @@
+.header {
+  padding: 1.5rem 0 0.5rem;
+
+  &__menu {
+    @include flex;
+    @include justify-content(space-between);
+    @include align-item(center);
+    position: relative;
+
+    @include mq(lg) {
+      @include flex-wrap;
+      @include justify-content(center);
+    }
+
+    @include mq(s) {
+      @include justify-content(space-between);
+    }
+
+    @include mq(xs) {
+      justify-content: space-around;
+    }
+
+    &-mob {
+      display: none;
+      @include order(1);
+
+      @include mq(s) {
+        display: block;
+      }
+
+      &-line {
+        width: 1.5rem;
+        height: 0.1rem;
+        background: $title;
+        margin: 0.25rem 0;
+      }
+    }
+
+    &-logo {
+      width: 9rem;
+
+      @include mq(lg) {
+        @include order(1);
+        margin: 0 1rem;
+      }
+
+      @include mq(s) {
+        @include order(2);
+        margin: 0;
+      }
+
+      @include mq(xs) {
+        @include order(1);
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 1rem;
+      }
+
+      a {
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $meb, sans-serif;
+        font-size: 1.45rem;
+        color: $link;
+        margin: 0 auto;
+
+        span {
+          color: $link-hover;
+        }
+      }
+    }
+
+    &-nav {
+      width: 32.65rem;
+
+      @include mq(lg) {
+        @include order(3);
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+
+      @include mq(s) {
+        display: none;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        height: 100%;
+        overflow: scroll;
+        z-index: 9999;
+        background: rgba($title, 0.9);
+      }
+
+      ul.nav {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        @include mq(s) {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        li {
+          display: inline-block;
+
+          @include mq(s) {
+            display: block;
+          }
+
+          a {
+            text-decoration: none;
+            font-family: $abl, sans-serif;
+            font-size: 0.6rem;
+            color: $title;
+            display: block;
+            margin: 0 auto;
+            padding: 0 0.5rem;
+
+            @include mq(s) {
+              font-size: 0.8rem;
+              margin: 1rem auto;
+              color: $white;
+            }
+          }
+
+          ul.subnav {
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            margin: 0;
+            padding: 1rem 0 0 4rem;
+            list-style-type: none;
+            width: 100%;
+            background: $white;
+            min-height: 4rem;
+            z-index: 9;
+            display: none;
+
+            @include mq(lg) {
+              top: 5.5rem;
+              padding: 1rem 0 0;
+            }
+
+            @include mq(s) {
+              position: static;
+              padding: 0;
+              width: auto;
+              background: transparent;
+            }
+
+            li {
+              display: inline-block;
+
+              @include mq(s) {
+                display: block;
+              }
+
+              a {
+                font-family: $a, sans-serif;
+                font-size: 0.7rem;
+                color: $link;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        li.close {
+          display: none;
+
+          @include mq(s) {
+            display: block;
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+          }
+
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &-reg {
+      width: 13.1rem;
+      @include flex;
+      @include justify-content(space-between);
+      @include align-item(center);
+
+      @include mq(lg) {
+        @include order(2);
+        margin: 0 1rem;
+      }
+
+      @include mq(s) {
+        width: 9rem;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        font-family: $ab, sans-serif;
+        font-size: 0.6rem;
+        color: #8b94aa;
+        display: inline-block;
+
+        img {
+          display: inline-block;
+          margin: 0 0.4rem;
+        }
+      }
+
+      a.sign {
+        position: relative;
+      }
+
+      a.sign:after {
+        content: url("../img/sign.png");
+        position: absolute;
+        top: 50%;
+        right: -1rem;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+      }
+
+      a.bucket {
+        color: $link;
+        position: relative;
+
+        span {
+          @include mq(s) {
+            display: none;
+          }
+        }
+
+        span.sum {
+          font-size: 0.4rem;
+          border: 1px solid $link;
+          @include border-radius(50%);
+          padding: 0.1rem 0.2rem;
+          position: absolute;
+          top: -0.7rem;
+          right: -1.5rem;
+          display: block;
+
+          @include mq(s) {
+            top: -0.9rem;
+          }
+        }
+      }
+
+      a.bucket:before {
+        content: url("../img/bucket.png");
+        position: absolute;
+        top: 50%;
+        right: -1rem;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+      }
+
+      .lang {
+        width: 2.1rem;
+        border: 1px solid $title;
+        @include border-radius(0.25rem);
+        padding: 0.34rem 0;
+        position: relative;
+
+        a {
+          display: block;
+          color: $title;
+          margin-left: 0.4rem;
+        }
+
+        a.ru {
+          display: none;
+        }
+
+        .change {
+          display: none;
+          position: absolute;
+          top: 1.5rem;
+          left:0;
+          padding: 0.25rem 0;
+          width: 2.1rem;
+          text-align: center;
+          border: 1px solid $title;
+          @include border-radius(0.25rem);
+          background: $white;
+          z-index: 99;
+
+          label {
+            font-family: $ab, sans-serif;
+            font-size: 0.6rem;
+            display: block;
+            cursor: pointer;
+            margin: 0.3rem auto;
+          }
+
+          input {
+            display: none;
+          }
+        }
+      }
+
+      .lang:after {
+        content: url("../img/arrow-down.png");
+        position: absolute;
+        bottom: 0.4rem;
+        right: 0.3rem;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__line {
+    img {
+      display: block;
+      width: 100%;
+      margin: 1rem auto;
+    }
+  }
+
+
+  &__search {
+    position: relative;
+
+    @include mq(xs) {
+      max-width: 14rem;
+      margin: 0 auto;
+    }
+
+    input {
+      border: 1px solid $sign;
+      @include border-radius(1rem);
+      background: transparent;
+      width: 100%;
+      max-width: 48.75rem;
+      padding: 0.5rem 0 0.5rem 1rem;
+      font-family: $a, sans-serif;
+      font-size: 0.8rem;
+      color: $black;
+      line-height: 1.5;
+
+      @include mq(xs) {
+        padding: 0.25rem 0 0.25rem 1rem;
+      }
+    }
+
+    @include placeholder {
+      font-family: $a, sans-serif;
+      font-size: 0.8rem;
+      color: $sign;
+
+      @include mq(xs) {
+        font-size: 0.6rem;
+      }
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      min-width: 10.5rem;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      border: 1px solid $button;
+      @include border-radius(1rem);
+      background: $button;
+      font-family: $abl, sans-serif;
+      font-size: 0.8rem;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @include mq(xs) {
+        min-width: 3rem;
+        background: transparent;
+        border: transparent;
+      }
+
+      span {
+        @include mq(xs) {
+          display: none;
+        }
+      }
+
+      i {
+        display: none;
+
+        @include mq(xs) {
+          display: block;
+          color: $button;
+        }
+      }
+    }
+
+    button:hover {
+      border: 1px solid $link;
+      background: $link;
+
+      @include mq(xs) {
+        border: transparent;
+        background: transparent;
+      }
+    }
+  }
+
+  &__domain {
+    @include flex;
+    margin: 0.5rem auto 0;
+
+    @include mq(xs) {
+      max-width: 14rem;
+      @include flex-wrap;
+    }
+
+    &-block {
+      @include flex;
+      @include align-item(center);
+      margin: 0 0.5rem;
+
+      @include mq(xs) {
+        margin: 0.25rem 0.5rem;
+      }
+
+      div {
+
+        img {
+          display: block;
+        }
+      }
+
+      span {
+        display: block;
+        font-family: $a, sans-serif;
+        font-size: 0.6rem;
+        color: $button;
+        margin: 0 0.25rem;
+      }
+    }
+  }
+}
+
+.header.domain {
+  padding: 1rem 0;
+}

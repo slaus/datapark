@@ -1,0 +1,462 @@
+/*                          PAGE VPS                        */
+.banner.vps {
+  background: url("../img/vps-banner-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 6.7rem 0;
+
+  @include mq(xs) {
+    padding: 3rem 0;
+  }
+
+  p.title {
+    max-width: 19rem;
+    margin: 1rem 0;
+
+    @include mq(xs) {
+      max-width: 14rem;
+      margin: 1rem auto;
+    }
+  }
+}
+
+.linux {
+  padding: 4rem 0;
+
+  @include mq(xs) {
+    padding: 2rem 0;
+  }
+
+  img {
+    display: block;
+    margin: 1rem auto;
+
+    @include mq(xs) {
+      max-width: 4rem;
+    }
+  }
+
+  h3.title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  p.title {
+    margin: 1rem auto;
+    text-align: center;
+    color: $title;
+    max-width: 36rem;
+
+    @include mq(s) {
+      max-width: 25rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(space-around);
+    padding-top: 2rem;
+
+    @include mq(md) {
+      max-width: 37rem;
+      margin: 0 auto;
+      @include flex-wrap;
+      @include justify-content(center);
+    }
+
+    @include mq(s) {
+      max-width: 27.5rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    &-block {
+      width: 25%;
+      max-width: 9.7rem;
+      border: 1px solid $title;
+      @include border-radius(1rem);
+      padding: 1.5rem;
+      background-color: $white;
+      background-image: url("../img/vps-green.png");
+      background-position: top;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include mq(lg) {
+        max-width: 8.7rem;
+        padding: 1.5rem 1rem;
+      }
+
+      @include mq(md) {
+        max-width: 9.7rem;
+        padding: 1.5rem;
+        margin: 1rem 2rem;
+      }
+
+      @include mq(s) {
+        width: 50%;
+        margin: 1rem 0.4rem;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+        margin: 1rem auto;
+      }
+
+      ul.list {
+        padding-top: 0.5rem;
+
+        li {
+          padding: 0.05rem;
+        }
+
+        li:first-child {
+          padding: 1.1rem 0 1rem;
+        }
+
+        li:nth-child(3) {
+          padding-top: 1.1rem;
+        }
+
+        li:nth-child(7) {
+          padding-bottom: 1.1rem;
+        }
+      }
+
+      .links {
+        margin: 1.5rem auto 0.5rem;
+      }
+    }
+  }
+
+  a.toWindows {
+    text-decoration: none;
+    font-family: $abl, sans-serif;
+    font-size: 0.7rem;
+    color: $link;
+    display: block;
+    text-align: center;
+    margin: 3rem auto 1rem;
+
+    span {
+      font-family: $a, sans-serif;
+    }
+
+    img {
+      display: block;
+      margin: 0.5rem auto 0;
+    }
+  }
+}
+
+.advantages {
+  background: #fafafa;
+  padding: 5rem 0 0;
+
+  @include mq(xs) {
+    padding: 1rem 0;
+  }
+
+  .container {
+    @include flex;
+    @include justify-content(space-around);
+    @include align-item(center);
+
+    @include mq(s) {
+      @include flex-wrap;
+      @include justify-content(center);
+    }
+  }
+
+  &__block {
+
+    @include mq(md) {
+      width: 47%;
+    }
+
+    @include mq(s) {
+      width: 100%;
+      max-width: 27.5rem;
+      margin: 1rem auto;
+      text-align: center;
+
+      @include mq(xs) {
+        max-width: 14rem;
+      }
+    }
+
+    div {
+      margin: 1rem 0;
+
+      p.title {
+        color: $title;
+        @include flex;
+        @include align-item(center);
+        margin: 0.5rem auto;
+
+        @include mq(s) {
+          max-width: 18rem;
+        }
+
+        @include mq(xs) {
+          font-size: 0.6rem;
+        }
+
+        span {
+          display: inline-block;
+          background: $link-hover;
+          width: 0.65rem;
+          height: 3px;
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+
+      @include mq(md) {
+        width: 100%;
+      }
+
+      @include mq(s) {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.windows {
+  padding: 4rem 0;
+
+  @include mq(xs) {
+    padding: 2rem 0;
+  }
+
+  img {
+    display: block;
+    margin: 1rem auto;
+
+    @include mq(xs) {
+      max-width: 4rem;
+    }
+  }
+
+  h3.title {
+    text-align: center;
+    margin: 0 auto;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  p.title {
+    margin: 1rem auto;
+    text-align: center;
+    color: $title;
+
+    @include mq(s) {
+      max-width: 25rem;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(space-around);
+    padding-top: 2rem;
+
+    @include mq(md) {
+      max-width: 37rem;
+      margin: 0 auto;
+      @include flex-wrap;
+      @include justify-content(center);
+    }
+
+    @include mq(s) {
+      max-width: 27.5rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    &-block {
+      width: 25%;
+      max-width: 9.7rem;
+      border: 1px solid $title;
+      @include border-radius(1rem);
+      padding: 1.5rem;
+      background-color: $white;
+      background-image: url("../img/vps-green.png");
+      background-position: top;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include mq(lg) {
+        max-width: 8.7rem;
+        padding: 1.5rem 1rem;
+      }
+
+      @include mq(md) {
+        max-width: 9.7rem;
+        padding: 1.5rem;
+        margin: 1rem 2rem;
+      }
+
+      @include mq(s) {
+        width: 50%;
+        margin: 1rem 0.4rem;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+        margin: 1rem auto;
+      }
+
+      ul.list {
+        padding-top: 0.5rem;
+
+        li {
+          padding: 0.05rem 0;
+        }
+
+        li:first-child {
+          padding: 1.1rem 0 1rem;
+        }
+
+        li:nth-child(3) {
+          padding-top: 1.1rem;
+        }
+
+        li:nth-child(7) {
+          padding-bottom: 1.1rem;
+        }
+      }
+
+      .links {
+        margin: 1.5rem auto 0.5rem;
+      }
+    }
+  }
+}
+
+.benefits {
+  background: #f3f3f3;
+  padding: 6.5rem 0;
+
+  @include mq(s) {
+    padding: 4rem 0;
+  }
+
+  @include mq(xs) {
+    padding: 2rem 0;
+  }
+
+  h3.title {
+    text-align: center;
+    margin: 0 auto;
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  &__block {
+    @include flex;
+    @include flex-wrap;
+    @include justify-content(space-around);
+    padding-top: 2rem;
+
+    @include mq(md) {
+      max-width: 37rem;
+      margin: 0 auto;
+    }
+
+    @include mq(s) {
+      max-width: 27.5rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    &-block {
+      width: 25%;
+      margin: 2rem auto;
+      max-width: 12.5rem;
+
+      @include mq(lg) {
+        max-width: 12rem;
+      }
+
+      @include mq(md) {
+        max-width: 8rem;
+      }
+
+      @include mq(s) {
+        width: 50%;
+        max-width: 10rem;
+      }
+
+      @include mq(xs) {
+        width: 45%;
+      }
+
+      div {
+        height: 4.5rem;
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        font-family: $abl, sans-serif;
+        font-size: 0.7rem;
+        color: $title;
+        margin: 1rem auto;
+        text-align: center;
+        min-height: 1.7rem;
+
+        @include mq(md) {
+          min-height: 2.3rem;
+        }
+
+        @include mq(xs) {
+          font-size: 0.6rem;
+        }
+      }
+
+      span {
+        font-family: $a, sans-serif;
+        font-size: 0.6rem;
+        color: $black;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+
+        @include mq(xs) {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+/*                                                          */

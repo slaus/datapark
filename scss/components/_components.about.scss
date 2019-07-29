@@ -1,0 +1,390 @@
+/*                     ABOUT US PAGE                        */
+.banner.about {
+  background: url("../img/about-banner-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 8.45rem 0 6.35rem;
+
+  @include mq(xs) {
+    padding: 4rem 0;
+  }
+
+  h3.title {
+    padding-left: 6.2rem;
+
+    @include mq(s) {
+      padding-left: 0;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  p.title {
+    max-width: 28rem;
+    line-height: 1.5;
+    padding-left: 6.2rem;
+    margin: 2rem 0 0;
+
+    @include mq(s) {
+      padding-left: 0;
+      margin: 2rem auto 0;
+      text-align: center;
+      max-width: 25rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    span {
+      font-family: $ai, sans-serif;
+      color: $button;
+    }
+  }
+}
+
+.everything {
+  background: url("../img/everything-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding-bottom: 12.66rem;
+
+  @include mq(xs) {
+    padding-bottom: 7rem;
+  }
+
+  &__block {
+    max-width: 48.75rem;
+    margin: 0 auto;
+    background: rgba($white, 0.91);
+    padding: 6rem 0 3.5rem;
+
+    @include mq(xs) {
+      max-width: 14rem;
+      padding: 3rem 0 1.5rem;
+    }
+
+    h3.title {
+      max-width: 24rem;
+      margin: 0 auto;
+      text-align: center;
+
+      @include mq(xs) {
+        max-width: 12.5rem;
+      }
+    }
+
+    span {
+      display: block;
+      font-family: $ab, sans-serif;
+      font-size: 0.8rem;
+      color: $link-hover;
+      text-align: center;
+      margin: 2.59rem auto;
+    }
+
+    p.title {
+      color: $title;
+      max-width: 41.5rem;
+      margin: 0 auto;
+      text-align: center;
+
+      @include mq(s) {
+        max-width: 25rem;
+      }
+
+      @include mq(xs) {
+        max-width: 12.5rem;
+      }
+    }
+  }
+}
+
+.main-advantages {
+  padding: 7.5rem 0;
+
+  @include mq(s) {
+    padding: 3rem 0;
+  }
+
+  h3.title {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 32rem;
+
+    @include mq(s) {
+      max-width: 25rem;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+  }
+
+  &__block {
+    max-width: 50.25rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    @include flex;
+    @include justify-content(space-between);
+
+    @include mq(md) {
+      @include flex-wrap;
+      @include justify-content(center);
+      max-width: 37rem;
+      margin: 0 auto;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+    }
+
+    &-block {
+      width: 25%;
+      max-width: 11.25rem;
+
+      @include mq(md) {
+        width: 50%;
+        max-width: 100%;
+        margin: 1rem auto;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      div {
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        font-family: $ab, sans-serif;
+        font-size: 0.7rem;
+        color: $title;
+        margin: 1.5rem auto 1rem;
+        text-align: center;
+      }
+
+      span {
+        display: block;
+        font-family: $a, sans-serif;
+        font-size: 0.6rem;
+        color: $title;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 9.6rem;
+      }
+    }
+  }
+}
+
+.cloud-platform {
+  background: url("../img/cloud-platform-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 3.5rem 0 3.1rem;
+
+  &__block {
+    max-width: 48rem;
+    background: #f8f8f8;
+    padding: 1.87rem 0;
+
+    @include mq(s) {
+      padding: 1.87rem 0.5rem 1.87rem 0;
+    }
+
+    @include mq(xs) {
+      max-width: 14rem;
+      padding: 1rem 0.5rem 1rem 0;
+      margin: 0 auto;
+    }
+
+    p {
+      font-family: $ai, sans-serif;
+      font-size: 0.9rem;
+      color: $title;
+      margin: 0 auto;
+
+      @include mq(md) {
+        font-size: 0.8rem;
+      }
+
+      @include mq(s) {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.comments {
+  padding: 8.5rem 0 6rem;
+
+  @include mq(s) {
+    padding: 4rem 0 2rem;
+  }
+
+  h3.title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  p.title {
+    color: $title;
+    text-align: center;
+    margin: 1rem auto;
+
+    @include mq(xs) {
+      max-width: 14rem;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__block {
+    max-width: 50.25rem;
+    margin: 0 auto;
+    padding-top: 4rem;
+
+    @include mq(xs) {
+      max-width: 14rem;
+      padding-top: 1rem;
+    }
+
+    .owl-dots {
+      display: block;
+      text-align: center;
+    }
+
+    .owl-dot {
+      width: 0.4rem;
+      height: 0.4rem;
+      border: 3px solid $link;
+      @include border-radius(50%);
+      background: $link;
+      display: inline-block;
+      margin: 1.5rem 0.15rem;
+    }
+
+    .owl-dot.active {
+      background: $link-hover;
+    }
+
+    &-block {
+      @include flex;
+      @include justify-content(space-between);
+      max-width: 19rem;
+      margin: 0 auto;
+
+      @include mq(xs) {
+        @include flex-wrap;
+        @include justify-content(center);
+      }
+
+      .image {
+
+        @include mq(xs) {
+          width: 100%;
+          margin: 1rem auto;
+        }
+
+        img {
+          width: 4.94rem;
+          height: 4.94rem;
+          display: block;
+          margin: 0 auto;
+          @include border-radius(50%);
+        }
+      }
+
+      div {
+        @include mq(xs) {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        p {
+          font-family: $ab, sans-serif;
+          font-size: 0.7rem;
+          color: $title;
+          margin: 1rem auto 0.5rem;
+
+          @include mq(xs) {
+            text-align: center;
+          }
+        }
+
+        span {
+          display: block;
+          font-family: $ai, sans-serif;
+          font-size: 0.6rem;
+          color: $title;
+          margin: 0 auto;
+          max-width: 12rem;
+
+          @include mq(xs) {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .owl-nav {
+      text-align: center;
+      margin: 2rem auto 0;
+    }
+
+    .owl-prev, .owl-next {
+      display: inline-block;
+      font-family: $abl, sans-serif;
+      font-size: 0.8rem;
+      text-transform: capitalize;
+      min-width: 5.4rem;
+      padding: 0.4rem 0.7rem;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      color: $white;
+      border: 1px solid $link;
+      background: $link;
+      @include border-radius(1rem);
+      box-shadow: 3px 3px 0px $link-hover;
+      -webkit-box-shadow: 3px 3px 0px $link-hover;
+      position: relative;
+      text-align: right;
+      margin: 0 0.25rem;
+    }
+
+    .owl-prev:hover, .owl-next:hover {
+      border: 1px solid $link-hover;
+      background: $link-hover;
+      box-shadow: 3px 3px 0px $link;
+      -webkit-box-shadow: 3px 3px 0px $link;
+    }
+
+    .owl-next {
+      text-align: left;
+    }
+
+    .owl-next:after {
+      content: url("../img/arrow-right.png");
+      position: absolute;
+      top: 45%;
+      transform: translateY(-45%);
+      -webkit-transform: translateY(-45%);
+      right: 1rem;
+    }
+
+    .owl-prev:after {
+      content: url("../img/arrow-left.png");
+      position: absolute;
+      top: 45%;
+      left: 1rem;
+      transform: translateY(-45%);
+      -webkit-transform: translateY(-45%);
+    }
+  }
+}
+/*                                                           */
